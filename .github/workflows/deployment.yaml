@@ -15,7 +15,7 @@ jobs:
       - name: Linting Project
         run: |
           echo 'Linting in progress' 
-          npm lint
+          npm run lint
   test:
     needs: lint
     runs-on: ubuntu-latest 
