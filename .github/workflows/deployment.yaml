@@ -1,9 +1,9 @@
 name: Lint Test & Deploy
-on: push
+on: [push, workflow_dispatch]
 jobs:
-  Lint:
-    - runs-on: ubuntu-latest 
-    - steps:
+  test:
+    runs-on: ubuntu-latest 
+    steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Node Version
@@ -14,5 +14,3 @@ jobs:
         run: npm ci
       - name: Run Test
         run: npm test
-  Test:
-  Deploy:
